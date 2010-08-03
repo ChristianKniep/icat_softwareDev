@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage{url}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphics}
 \usepackage{color}
@@ -9,26 +9,70 @@
 \newcommand{\code}[1]{\colorbox{lGray}{\texttt{#1}}}
 
 \author{Christian Kniep}
-\title{Unit1 \\ scope statement}
+\title{Unit1 \\ Project Planning}
 \date{\today}
 %----------------------------
 \begin{document}
 \maketitle
-In this unit you are supposed to create a scope statement.\\
-The scope statement is like an offer you make to the customer to match his product concept catalogue.
-\section{Basics}
-\subsection{product concept catalogue}
-If a customer are willing to pay for some piece of software he has some thougths in mind,
+In this unit you are supposed to create 
+\begin{itemize}
+    \item a scope statement 
+    \item a internal timescale, with milestones, needed resources, quality plans
+    \item a internal plan about the basic design/structure of the project
+\end{itemize}
+
+\tableofcontents
+
+\newpage
+%%%%%%%%% SCENARIO
+\section{Scenario}
+This would be the 'product concept catalogue' you get from the customer and to which will be referenced during this course.
+\subsection{Resource Monitoring Management}
+\paragraph{Intention}
+We would like to put in place a service which provided an unspecified user
+the capability of getting Information about resources he usualy can not interact with.
+\paragraph{functional requirement}
+\begin{itemize}
+    \item The user has to use a commandline-tool to get the information from the deamon,
+          such as: \code{./infoClient getResourceXY}
+    \item If there are serveral different daemons on one or more machines,
+          it has to be possible to select one.
+\end{itemize}
+
+\paragraph{Non-functional requirement}
+\begin{enumerate}
+    \item \textbf{Usability} It should be easy to use even for an user who has no further IT-experience
+    \item \textbf{Reliability} It should be a stable, easy to maintain and reliable system
+    \item \textbf{Expendability} New features should be easy to implement in the software 
+\end{enumerate}
+
+\paragraph{Information gathering}
+To gather information we should have a dedicated software-piece to place it
+within the resource-area where it is supposed to gather information.
+\paragraph{Resources}
+The software should include at least five resources in the monitoring system.
+Since our employees are not that big in computers you may offer us some possible
+resource information you have in mind. Maybe including these areas of interest:
+\begin{itemize}
+    \item \textbf{Filesystem} Maybe free space, occupied space, swap used, etc.
+    \item \textbf{Network} Internet available, ping time, ...
+    \item \textbf{OS} What OS is running, some configurations
+\end{itemize}
+
+%%%%%%%%% Product Concept / Scope Statement
+\section{Product Concept / Scope Statement}
+\subsection{Product Concept Catalogue}
+If a customer is willing to pay for some piece of software he has some thougths in mind,
 what he is intended to do with it.\\
 At least he should have some thoughts.\\
 The document which includes the intention of the customer is called 'product concept catalog'. Its rather an technical manual.
 Mostly it contains the highest expectation of the customer. In some cases it containts things that are not succedable, so you have to keep that in mind. \\
 Its highly recommended to talk to the customer what he realisticly expects and to try to come to the same understanding with the customer to bring the project to a good end.
-\subsection{scope statement}
+\subsection{Scope Statement}
 A document which describs the product you are able (willing) to offer to the customer is the scope statement.
 It contains the key data of the project you are willing to develop for the customer.
 Its also kind of a comercial to advertise your statement. It containts \textbf{NO} writen or even planned code at all. \\
-Its like a brief manual with no exlplaination of any detail how it will be implemented. \\
+Its like a brief manual with no explaination of any detail how it will be implemented. \\
 More like: \\
 {\colorbox{lGray}{The software will provide a login-mechanism, which connects to a Windows-Domain.} \\
 {\colorbox{lGray}{If the login is successfull the user can choose from this options: X Y Z}\\
@@ -39,17 +83,32 @@ If its not in the scope statement then you don't have to deliver it. But please 
 If the customer wants a little change during the way you \textbf{won't} say: 'Sorry sir, thats not in our contract.' \\
 If the changes to big and you are not willing to do it on your own cost you have to negotiate with your costumer.
 
-\section{scenario}
-This would be the 'product concept catalogue' you get from the customer and to which will be referenced during this course.
-\subsection{Resource Monitoring Management}
-\paragraph{Intention}
-We would like to put in place a service which provided and unspezified user
-the capability of getting Information about resources he usualy can not interact with.
-It should be easy to use even for an user who has no further IT-experience.
-\paragraph{Information gathering}
-To gather information we would have a dedicated software-piece to place it within the resource-area where it is supposed to gather information.
-\paragraph{Interaction}
-The interaction with the information-service should be commandline-based, such as: \code{./infoClient getResourceXY}
-\paragraph{Resources}
-We want at least five resources in the monitoring system. Since our employees are not that big in computers you may offer us some possible resource information you have in mind.
+\section{Project Plan}
+The project plan should include:
+\begin{itemize}
+    \item \textbf{Timescale} which gives you an overview about the project schedule 
+    \item \textbf{Milestones} which are suposed to keep you focused on the current issue. \\
+            They will be positioned within the projects timescale to set subgoals and lets you measure
+            how good you can catch the deadline.
+    \item \textbf{Resources} to plan the needed resources within your project. \\
+            In most cases you will need licenses, hardware, rooms, additional personal on standby if you are behind the plan...
+    \item \textbf{Quality (Assurance) plans} predefines what kind of measurement
+            you will provide to assure the quality of your project deliverables. \\
+            In most cases you supposed to test every piece of your software to assure that it fits together.
+\end{itemize}
+    
+\section{Design/Structure}
+To get it bit into the topic you should prepare with some basics.
+Consider about some alternative design methods/techniques and environments.
+Use this points to wrap your had around it:
+\begin{itemize}
+    \item whats the deamon/client supposed to do?
+    \item what designs you could use (e.g. light client/heavy daemon, the other way around or a mixture)?
+    \item how shoud the interaction between the two look like (e.g. a little chart)?
+    \item how to design the userinterface that even the stupidest user could use it?
+\end{itemize}
+
+
+
+
 \end{document}
