@@ -3,6 +3,12 @@
 \geometry{hmargin=1cm,top=1cm,bottom=1cm}
 \usepackage{tabularx}
 \usepackage{wasysym} % checkbox sybols
+\usepackage{graphics}
+\usepackage{color}
+\usepackage{url}
+
+\definecolor{lGray}{gray}{.90}
+\newcommand{\code}[1]{\colorbox{lGray}{\texttt{#1}}}
 
 \author{Christian Kniep}
 \title{Title}
@@ -15,7 +21,7 @@
 \begin{tabular*}{170mm}{|p{85mm}|p{76.5mm}|}
 \hline
 Program Name & Software Development Project\\ \hline
-Name ot the Student & Hanson\\ \hline
+Name ot the Student & Hansen \\ \hline
 Roll Number & \\ \hline
 Unit No \& Title & \\ \hline
 Assignment No. & \\ \hline
@@ -72,42 +78,30 @@ I have reference the sources from which from where information is obtained by me
 \end{enumerate}
 \subsection*{Merit}
 \begin{enumerate}
-    \item Write the points to meet the merit criteria
+    \item All criteria are meet with a good background research
+    \item Your soloutions are well planed and are aware of security and maintenance
 \end{enumerate}
 
 \subsection*{Distinction}
 \begin{enumerate}
-    \item Write the points to meet the Distinction criteria
+    \item You implemented at least two different kinds of resources
+    \item The documentation and the presentation could be used by an untrained user
 \end{enumerate}
 
 {\center \section*{TITLE}}
 {\center Resource Information System}
 
 {\center \section*{SCENARIO}}
-This would be the 'product concept catalogue' you get from the customer and to which will be referenced during this course.
-\subsection{Resource Monitoring Management}
-\paragraph{Intention}
-We would like to put in place a service which provided an unspecified user
-the capability of getting Information about resources he usualy can not interact with.
-\paragraph{functional requirement}
-\begin{itemize}
-    \item The user has to use a commandline-tool to get the information from the deamon,
-          such as: \code{./infoClient getResourceXY}
-    \item If there are serveral different daemons on one or more machines,
-          it has to be possible to select one.
-\end{itemize}
-
-\paragraph{Non-functional requirement}
+A client of yours likes to put in place a service which provided an unspecified user
+the capability of getting Information about resources he usualy can not interact with. \\
+It should be a simple commandline based tool. The software should be driven by the following principles:
 \begin{enumerate}
     \item \textbf{Usability} It should be easy to use even for an user who has no further IT-experience
     \item \textbf{Reliability} It should be a stable, easy to maintain and reliable system
     \item \textbf{Expendability} New features should be easy to implement in the software 
 \end{enumerate}
-
-\paragraph{Information gathering}
-To gather information we should have a dedicated software-piece to place it
-within the resource-area where it is supposed to gather information.
-\paragraph{Resources}
+To gather information there should be a dedicated software-piece to place it
+within the resource-area where it is supposed to gather information. \\
 The software should include at least five resources in the monitoring system.
 Since our employees are not that big in computers you may offer us some possible
 resource information you have in mind. Maybe including these areas of interest:
@@ -116,15 +110,73 @@ resource information you have in mind. Maybe including these areas of interest:
     \item \textbf{Network} Internet available, ping time, ...
     \item \textbf{OS} What OS is running, some configurations
 \end{itemize}
+
 {\center \section*{TASK}}
 \subsection*{Task 1}
-Create a 
-
+Evaluate the following topics and decide founded on the research what your software will look like
+    \paragraph{Client/Server} What are they suppose to be? How much 'inteligence' should either of them could have. What are the advantages and disadvantages of rich or small part?
+    \paragraph{Resources} Pic at least five resources you want to monitor with this system.
+    \paragraph{Protocol} How should the two parts communicate? Define a the communication for the choosen resources.
+    \paragraph{Softare Planning Tool} Evaluate an appropiate Tool to keep track on your progress.
+\subsection*{Task 2}
+Develop a soulution for the Project
+\begin{itemize}
+    \item Evaluate at least three programing languages for the specifica this project provides
+    \item Create pseudocode and class-diagram  for the choosen resources.
+    \item Review what you have achieved so far in terms of maintaiance and security.
+\end{itemize}
+\subsection*{Task 3}
+Implement the project in the choosen language
+\begin{itemize}
+    \item Every step you take in the implementation should be tested. From the smallest fracture to the mixed modules.
+    \item Create a plan which includes a timescale of the implementation states.
+\end{itemize}
+\subsection*{Task 4}
+documentation, presentation and review
+\begin{itemize}
+    \item Create two documentations:
+    \begin{itemize}
+        \item a documentation which contains all aspects of the users interaction (how it should be used).
+        \item a manual which contains informations for the administrator. What are the requirements, how to setup. Also provide a template to implement another resource.
+    \end{itemize}
+    \item Present your solution in a structured and well organised format
+    \item Have a critical view on your software. Try to work out the advantages and the disadvantages. Document known bugs. What would you change in 
+\end{itemize}   
 
 {\center \section*{GUIDANCE}}
-//Write the guidance for the assignment
-
+\subsection*{Languages}
+Consider that you are supposed to handle strings and to write a small, flexible piece of software.
+\subsection*{Software Development Tools}
+Have a look at some mindmap-, gantgraph-tools and tools in which you can plan your class-modell.
+\subsection*{Protocols}
+Consider the header/body-patern for your protocol and keep it simple.
 
 {\center \section*{REFERENCES}}
-//List of books/website which you want to give for the assignment
+\subsection*{Languages}
+Have a look at the following programming languages.  
+\begin{itemize}
+    \item[bash] \url{http://en.wikipedia.org/wiki/Bash_%28Unix_shell%29}
+    \item[java] \url{http://en.wikipedia.org/wiki/Java_%28programming_language%29}
+    \item[python] \url{http://en.wikipedia.org/wiki/Python_%28programming_language%29}
+    \item[c/c++] \url{http://en.wikipedia.org/wiki/C_%28programming_language%29}
+\end{itemize}
+\subsection*{Software Development Tools}
+
+\subsection*{Protocols}
+\url{http://en.wikipedia.org/wiki/Head-Body_Pattern}
+
+\subsection*{Assignments}
+\subsubsection*{Unit 1 - 03.09.2010}
+You have done good work on the Client-Server issue but you should not forget to have a look at the development tools.\\
+The interface is as simple as it should be so it will be easy for the users to interact with the system.
+\subsubsection*{Unit 2 - 15.09.2010}
+The comparision between the programming languages are quite detailed and well researched. You should redo the class-diagram in the UML formating as we talked about.\\
+The pseudocode only shows what the clients output will be. You should produce the pseudocode for the deamon and the interaction as well. The client sends the request to the deamon, the deamon evaluates the request, send the reply to the client and the client shows the output.
+Multiple procedures you just have to do ones.
+Don't foret to review the outcomes you have produced so far as described in the Task2.
+\subsubsection*{Unit 3 - 22.09.2010}
+
+\subsubsection*{Unit 4 - 28.09.2010}
+
+
 \end{document}
